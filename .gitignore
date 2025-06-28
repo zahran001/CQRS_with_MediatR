@@ -1,0 +1,74 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+# Build results
+bin/
+obj/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio
+.vs/
+.vscode/
+*.code-workspace
+
+# Rider IDE
+.idea/
+
+# NuGet packages
+*.nupkg
+packages/
+# Optional NuGet restore results
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# MSBuild Binary log
+*.binlog
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+_NCrunch_*
+
+# SonarQube
+.sonar/
+
+# Test results
+TestResult*/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Auto-generated files
+Generated_Code/
+
+# Other
+*.dbmdl
+*.bak
+*.sql
+*.sqlite
+
+# Git itself
+*.orig
