@@ -1,10 +1,17 @@
 using BlazorUI.Components;
+using DemoLibrary;
+using DemoLibrary.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+// Chaining only works if each method returns the same type.
+
+// Register custom services separately
+builder.Services.AddSingleton<IDataAccess, DemoDataAccess>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<DemoLibraryMediatREntrypoint>()); // adding the entire assembly
 
 var app = builder.Build();
 

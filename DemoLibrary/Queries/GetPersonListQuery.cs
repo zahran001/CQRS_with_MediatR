@@ -20,6 +20,7 @@ namespace DemoLibrary.Queries
 	 * Two records with the same values are considered equal (unlike classes).
 	 */
 
+	// IRequest - is for your queries and commands
 	public record GetPersonListQuery() : IRequest<List<PersonModel>>;
 	
 	//public class GetPersonListQueryClass : IRequest<List<PersonModel>>

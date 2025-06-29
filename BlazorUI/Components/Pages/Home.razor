@@ -1,4 +1,6 @@
 ﻿@page "/"
+@inject MediatR.IMediator _mediator
+@* We can now use this mediator to find what we need *@
 
 <PageTitle>Home</PageTitle>
 
@@ -17,9 +19,12 @@ Welcome to your new app.
 	List<PersonModel> people;
 
 	// This is called at the beginning when the page is loaded.
-	protected override Task OnInitializedAsync()
+	protected override async Task OnInitializedAsync()
 	{
 		// get list of people from the service
-		throw new NotImplementedException();
+		people = await _mediator.Send(new GetPersonListQuery());
+
+		// MediatR said I've got a new Send request and the data is of type GetPersonListQuery - who handles that?
+		// Go to Handlers, you'll see GetPersonListHandler handles GetPersonListQuery.
 	}
 }
