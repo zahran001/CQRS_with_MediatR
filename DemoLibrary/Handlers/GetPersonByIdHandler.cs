@@ -15,6 +15,7 @@ namespace DemoLibrary.Handlers
 
 		public GetPersonByIdHandler(IMediator mediator)
         {
+			// only one dependency here - the mediator
 			_mediator = mediator;
 		}
         public async Task<PersonModel> Handle(GetPersonByIdQuery request, CancellationToken cancellationToken)

@@ -18,11 +18,13 @@ namespace DemoLibrary.DataAccess
         }
 
         // 2 methods
+        // implement GetPeople method
         public List<PersonModel> GetPeople()
         {
             return people;
         }
 
+        // implement InsertPerson method
         public PersonModel InsertPerson(string firstName, string lastName)
         {
             PersonModel p = new() { FirstName = firstName, LastName = lastName };

@@ -21,6 +21,7 @@ namespace DemoLibrary.Queries
 	 */
 
 	// IRequest - is for your queries and commands
+	// query is for read and command for write
 	public record GetPersonListQuery() : IRequest<List<PersonModel>>;
 	
 	//public class GetPersonListQueryClass : IRequest<List<PersonModel>>
